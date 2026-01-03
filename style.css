@@ -10,7 +10,7 @@
 
 body {
   color: black;
-  background-color: white;
+  background-color: #fef9f3; /* Light cream/ghee color */
   margin: 0;
   padding: 0;
 }
@@ -37,6 +37,7 @@ main {
   background-color: var(--bg-primary);
   transition: width 600ms ease;
   overflow: scroll;
+  z-index: 1000;
 }
 
 .navbar-nav {
@@ -114,8 +115,7 @@ main {
   transition: var(--transition-speed);
 }
 
-.logo-text
-{
+.logo-text {
   display: inline;
   position: absolute;
   left: -999px;
@@ -148,6 +148,7 @@ main {
 
   main {
     margin: 0;
+    margin-bottom: 6rem; /* Add space for bottom navbar */
   }
 }
 
@@ -167,14 +168,16 @@ main {
     display: inline;
   }
 
-  .navbar:hover .logo svg
-  {
+  .navbar:hover .logo svg {
     margin-left: 11rem;
   }
 
-  .navbar:hover .logo-text
-  {
+  .navbar:hover .logo-text {
     left: 0px;
+  }
+
+  main {
+    margin-left: 6rem; /* Add more space to prevent content cutoff */
   }
 }
 
@@ -215,7 +218,7 @@ main {
   display: block;
 }
 
-ul{
+ul {
   padding: 0;
   list-style-type: none;
 }
