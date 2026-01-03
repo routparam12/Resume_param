@@ -1,224 +1,474 @@
-:root {
-  font-size: 16px;
-  font-family: 'Open Sans';
-  --text-primary: #b6b6b6;
-  --text-secondary: #ececec;
-  --bg-primary: #23232e;
-  --bg-secondary: #141418;
-  --transition-speed: 600ms;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <title>Paramjeet Rout - Data Scientist & AI Engineer</title>
+  <script defer src="theme.js"></script>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap" rel="stylesheet" />
+</head>
 
-body {
-  color: black;
-  background-color: #fef9f3; /* Light cream/ghee color */
-  margin: 0;
-  padding: 0;
-}
+<body>
+  <nav class="navbar">
+    <ul class="navbar-nav">
+      <li class="logo">
+        <a href="mailto:routparamjeet@gmail.com" target="_blank" class="nav-link">
+          <span class="link-text logo-text">Param's🚢</span>
+          <svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="angle-double-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg-inline--fa fa-angle-double-right fa-w-14 fa-5x">
+            <g class="fa-group">
+              <path fill="currentColor" d="M224 273L88.37 409a23.78 23.78 0 0 1-33.8 0L32 386.36a23.94 23.94 0 0 1 0-33.89l96.13-96.37L32 159.73a23.94 23.94 0 0 1 0-33.89l22.44-22.79a23.78 23.78 0 0 1 33.8 0L223.88 239a23.94 23.94 0 0 1 .1 34z" class="fa-secondary"></path>
+              <path fill="currentColor" d="M415.89 273L280.34 409a23.77 23.77 0 0 1-33.79 0L224 386.26a23.94 23.94 0 0 1 0-33.89L320.11 256l-96-96.47a23.94 23.94 0 0 1 0-33.89l22.52-22.59a23.77 23.77 0 0 1 33.79 0L416 239a24 24 0 0 1-.11 34z" class="fa-primary"></path>
+            </g>
+          </svg>
+        </a>
+      </li>
 
-body::-webkit-scrollbar {
-  width: 0.25rem;
-}
+      <li class="nav-item">
+        <a href="https://www.linkedin.com/in/paramjeet-rout2026/" target="_blank" class="nav-link">
+          <svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="cat" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg-inline--fa fa-cat fa-w-16 fa-9x">
+            <g class="fa-group">
+              <path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" class="fa-secondary"></path>
+            </g>
+          </svg>
+          <span class="link-text">LinkedIn</span>
+        </a>
+      </li>
 
-body::-webkit-scrollbar-track {
-  background: #1e1e24;
-}
+      <li class="nav-item">
+        <a href="https://github.com/routparam12" target="_blank" class="nav-link">
+          <svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="alien-monster" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="svg-inline--fa fa-alien-monster fa-w-18 fa-9x">
+            <g class="fa-group">
+              <path fill="currentColor" d="M448 96c0-35.3-28.7-64-64-64H64C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96zM265.8 407.7c0-1.8 0-6 .1-11.6c.1-11.4 .1-28.8 .1-43.7c0-15.6-5.2-25.5-11.3-30.7c37-4.1 76-9.2 76-73.1c0-18.2-6.5-27.3-17.1-39c1.7-4.3 7.4-22-1.7-45c-13.9-4.3-45.7 17.9-45.7 17.9c-13.2-3.7-27.5-5.6-41.6-5.6s-28.4 1.9-41.6 5.6c0 0-31.8-22.2-45.7-17.9c-9.1 22.9-3.5 40.6-1.7 45c-10.6 11.7-15.6 20.8-15.6 39c0 63.6 37.3 69 74.3 73.1c-4.8 4.3-9.1 11.7-10.6 22.3c-9.5 4.3-33.8 11.7-48.3-13.9c-9.1-15.8-25.5-17.1-25.5-17.1c-16.2-.2-1.1 10.2-1.1 10.2c10.8 5 18.4 24.2 18.4 24.2c9.7 29.7 56.1 19.7 56.1 19.7c0 9 .1 21.7 .1 30.6c0 4.8 .1 8.6 .1 10c0 4.3-3 9.5-11.5 8C106 393.6 59.8 330.8 59.8 257.4c0-91.8 70.2-161.5 162-161.5s166.2 69.7 166.2 161.5c.1 73.4-44.7 136.3-110.7 158.3c-8.4 1.5-11.5-3.7-11.5-8z" class="fa-secondary"></path>
+            </g>
+          </svg>
+          <span class="link-text">Github</span>
+        </a>
+      </li>
 
-body::-webkit-scrollbar-thumb {
-  background: #6649b8;
-}
+      <li class="nav-item">
+        <a href="https://twitter.com/Paramjeer_r" target="_blank" class="nav-link">
+          <svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-w-16 fa-5x">
+            <g class="fa-group">
+              <path fill="currentColor" d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" class="fa-secondary"></path>
+              <path fill="currentColor" d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" class="fa-primary"></path>
+            </g>
+          </svg>
+          <span class="link-text">X (Twitter)</span>
+        </a>
+      </li>
 
-main {
-  margin-left: 5rem;
-  padding: 1rem;
-}
+      <li class="nav-item">
+        <a href="https://discord.com/users/YOUR_DISCORD_ID" target="_blank" class="nav-link">
+          <svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="svg-inline--fa fa-w-20 fa-5x">
+            <g class="fa-group">
+              <path fill="currentColor" d="M524.531,69.836a1.5,1.5,0,0,0-.764-.7A485.065,485.065,0,0,0,404.081,32.03a1.816,1.816,0,0,0-1.923.91,337.461,337.461,0,0,0-14.9,30.6,447.848,447.848,0,0,0-134.426,0,309.541,309.541,0,0,0-15.135-30.6,1.89,1.89,0,0,0-1.924-.91A483.689,483.689,0,0,0,116.085,69.137a1.712,1.712,0,0,0-.788.676C39.068,183.651,18.186,294.69,28.43,404.354a2.016,2.016,0,0,0,.765,1.375A487.666,487.666,0,0,0,176.02,479.918a1.9,1.9,0,0,0,2.063-.676A348.2,348.2,0,0,0,208.12,430.4a1.86,1.86,0,0,0-1.019-2.588,321.173,321.173,0,0,1-45.868-21.853,1.885,1.885,0,0,1-.185-3.126c3.082-2.309,6.166-4.711,9.109-7.137a1.819,1.819,0,0,1,1.9-.256c96.229,43.917,200.41,43.917,295.5,0a1.812,1.812,0,0,1,1.924.233c2.944,2.426,6.027,4.851,9.132,7.16a1.884,1.884,0,0,1-.162,3.126,301.407,301.407,0,0,1-45.89,21.83,1.875,1.875,0,0,0-1,2.611,391.055,391.055,0,0,0,30.014,48.815,1.864,1.864,0,0,0,2.063.7A486.048,486.048,0,0,0,610.7,405.729a1.882,1.882,0,0,0,.765-1.352C623.729,277.594,590.933,167.465,524.531,69.836ZM222.491,337.58c-28.972,0-52.844-26.587-52.844-59.239S193.056,219.1,222.491,219.1c29.665,0,53.306,26.82,52.843,59.239C275.334,310.993,251.924,337.58,222.491,337.58Zm195.38,0c-28.971,0-52.843-26.587-52.843-59.239S388.437,219.1,417.871,219.1c29.667,0,53.307,26.82,52.844,59.239C470.715,310.993,447.538,337.58,417.871,337.58Z" class="fa-secondary"></path>
+              <path fill="currentColor" d="M524.531,69.836a1.5,1.5,0,0,0-.764-.7A485.065,485.065,0,0,0,404.081,32.03a1.816,1.816,0,0,0-1.923.91,337.461,337.461,0,0,0-14.9,30.6,447.848,447.848,0,0,0-134.426,0,309.541,309.541,0,0,0-15.135-30.6,1.89,1.89,0,0,0-1.924-.91A483.689,483.689,0,0,0,116.085,69.137a1.712,1.712,0,0,0-.788.676C39.068,183.651,18.186,294.69,28.43,404.354a2.016,2.016,0,0,0,.765,1.375A487.666,487.666,0,0,0,176.02,479.918a1.9,1.9,0,0,0,2.063-.676A348.2,348.2,0,0,0,208.12,430.4a1.86,1.86,0,0,0-1.019-2.588,321.173,321.173,0,0,1-45.868-21.853,1.885,1.885,0,0,1-.185-3.126c3.082-2.309,6.166-4.711,9.109-7.137a1.819,1.819,0,0,1,1.9-.256c96.229,43.917,200.41,43.917,295.5,0a1.812,1.812,0,0,1,1.924.233c2.944,2.426,6.027,4.851,9.132,7.16a1.884,1.884,0,0,1-.162,3.126,301.407,301.407,0,0,1-45.89,21.83,1.875,1.875,0,0,0-1,2.611,391.055,391.055,0,0,0,30.014,48.815,1.864,1.864,0,0,0,2.063.7A486.048,486.048,0,0,0,610.7,405.729a1.882,1.882,0,0,0,.765-1.352C623.729,277.594,590.933,167.465,524.531,69.836ZM222.491,337.58c-28.972,0-52.844-26.587-52.844-59.239S193.056,219.1,222.491,219.1c29.665,0,53.306,26.82,52.843,59.239C275.334,310.993,251.924,337.58,222.491,337.58Zm195.38,0c-28.971,0-52.843-26.587-52.843-59.239S388.437,219.1,417.871,219.1c29.667,0,53.307,26.82,52.844,59.239C470.715,310.993,447.538,337.58,417.871,337.58Z" class="fa-primary"></path>
+            </g>
+          </svg>
+          <span class="link-text">Discord</span>
+        </a>
+      </li>
 
-.navbar {
-  position: fixed;
-  background-color: var(--bg-primary);
-  transition: width 600ms ease;
-  overflow: scroll;
-  z-index: 1000;
-}
+      <li class="nav-item">
+        <a href="https://wa.me/919337718142" target="_blank" class="nav-link">
+          <svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg-inline--fa fa-w-14 fa-5x">
+            <g class="fa-group">
+              <path fill="currentColor" d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" class="fa-secondary"></path>
+              <path fill="currentColor" d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" class="fa-primary"></path>
+            </g>
+          </svg>
+          <span class="link-text">WhatsApp</span>
+        </a>
+      </li>
 
-.navbar-nav {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100%;
-}
+      <li class="nav-item">
+        <a href="https://www.facebook.com/profile.php?id=100068239310730" target="_blank" class="nav-link">
+          <svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="space-shuttle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="svg-inline--fa fa-space-shuttle fa-w-20 fa-5x">
+            <g class="fa-group">
+              <path fill="currentColor" d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z" class="fa-secondary"></path>
+            </g>
+          </svg>
+          <span class="link-text">Facebook</span>
+        </a>
+      </li>
 
-.nav-item {
-  width: 100%;
-}
+      <li class="nav-item">
+        <a href="https://sayhelloworld.co" target="_blank" class="nav-link">
+          <svg aria-hidden="true" focusable="false" data-prefix="fad" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="svg-inline--fa fa-laptop fa-w-20 fa-5x">
+            <g class="fa-group">
+              <path fill="currentColor" d="M471.6 21.7c-21.9-21.9-57.3-21.9-79.2 0L362.3 51.7l97.9 97.9 30.1-30.1c21.9-21.9 21.9-57.3 0-79.2L471.6 21.7zm-299.2 220c-6.1 6.1-10.8 13.6-13.5 21.9l-29.6 88.8c-2.9 8.6-.6 18.1 5.8 24.6s15.9 8.7 24.6 5.8l88.8-29.6c8.2-2.7 15.7-7.4 21.9-13.5L437.7 172.3 339.7 74.3 172.4 241.7zM96 64C43 64 0 107 0 160V416c0 53 43 96 96 96H352c53 0 96-43 96-96V320c0-17.7-14.3-32-32-32s-32 14.3-32 32v96c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32V160c0-17.7 14.3-32 32-32h96c17.7 0 32-14.3 32-32s-14.3-32-32-32H96z" class="fa-secondary"></path>
+            </g>
+          </svg>
+          <span class="link-text">Blog</span>
+        </a>
+      </li>
 
-.nav-item:last-child {
-  margin-top: auto;
-}
+      <li class="nav-item" id="themeButton">
+        <a href="#" class="nav-link">
+          <svg class="theme-icon" id="lightIcon" aria-hidden="true" focusable="false" data-prefix="fad" data-icon="moon-stars" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-moon-stars fa-w-16 fa-7x">
+            <g class="fa-group">
+              <path fill="currentColor" d="M320 32L304 0l-16 32-32 16 32 16 16 32 16-32 32-16zm138.7 149.3L432 128l-26.7 53.3L352 208l53.3 26.7L432 288l26.7-53.3L512 208z" class="fa-secondary"></path>
+              <path fill="currentColor" d="M332.2 426.4c8.1-1.6 13.9 8 8.6 14.5a191.18 191.18 0 0 1-149 71.1C85.8 512 0 426 0 320c0-120 108.7-210.6 227-188.8 8.2 1.6 10.1 12.6 2.8 16.7a150.3 150.3 0 0 0-76.1 130.8c0 94 85.4 165.4 178.5 147.7z" class="fa-primary"></path>
+            </g>
+          </svg>
+          <svg class="theme-icon" id="solarIcon" aria-hidden="true" focusable="false" data-prefix="fad" data-icon="sun" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-sun fa-w-16 fa-7x">
+            <g class="fa-group">
+              <path fill="currentColor" d="M502.42 240.5l-94.7-47.3 33.5-100.4c4.5-13.6-8.4-26.5-21.9-21.9l-100.4 33.5-47.41-94.8a17.31 17.31 0 0 0-31 0l-47.3 94.7L92.7 70.8c-13.6-4.5-26.5 8.4-21.9 21.9l33.5 100.4-94.7 47.4a17.31 17.31 0 0 0 0 31l94.7 47.3-33.5 100.5c-4.5 13.6 8.4 26.5 21.9 21.9l100.41-33.5 47.3 94.7a17.31 17.31 0 0 0 31 0l47.31-94.7 100.4 33.5c13.6 4.5 26.5-8.4 21.9-21.9l-33.5-100.4 94.7-47.3a17.33 17.33 0 0 0 .2-31.1zm-155.9 106c-49.91 49.9-131.11 49.9-181 0a128.13 128.13 0 0 1 0-181c49.9-49.9 131.1-49.9 181 0a128.13 128.13 0 0 1 0 181z" class="fa-secondary"></path>
+              <path fill="currentColor" d="M352 256a96 96 0 1 1-96-96 96.15 96.15 0 0 1 96 96z" class="fa-primary"></path>
+            </g>
+          </svg>
+          <svg class="theme-icon" id="darkIcon" aria-hidden="true" focusable="false" data-prefix="fad" data-icon="sunglasses" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="svg-inline--fa fa-sunglasses fa-w-18 fa-7x">
+            <g class="fa-group">
+              <path fill="currentColor" d="M574.09 280.38L528.75 98.66a87.94 87.94 0 0 0-113.19-62.14l-15.25 5.08a16 16 0 0 0-10.12 20.25L395.25 77a16 16 0 0 0 20.22 10.13l13.19-4.39c10.87-3.63 23-3.57 33.15 1.73a39.59 39.59 0 0 1 20.38 25.81l38.47 153.83a276.7 276.7 0 0 0-81.22-12.47c-34.75 0-74 7-114.85 26.75h-73.18c-40.85-19.75-80.07-26.75-114.85-26.75a276.75 276.75 0 0 0-81.22 12.45l38.47-153.8a39.61 39.61 0 0 1 20.38-25.82c10.15-5.29 22.28-5.34 33.15-1.73l13.16 4.39A16 16 0 0 0 180.75 77l5.06-15.19a16 16 0 0 0-10.12-20.21l-15.25-5.08A87.95 87.95 0 0 0 47.25 98.65L1.91 280.38A75.35 75.35 0 0 0 0 295.86v70.25C0 429 51.59 480 115.19 480h37.12c60.28 0 110.38-45.94 114.88-105.37l2.93-38.63h35.76l2.93 38.63c4.5 59.43 54.6 105.37 114.88 105.37h37.12C524.41 480 576 429 576 366.13v-70.25a62.67 62.67 0 0 0-1.91-15.5z" class="fa-secondary"></path>
+            </g>
+          </svg>
+          <span class="link-text">Themify</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
 
-.nav-link {
-  display: flex;
-  align-items: center;
-  height: 5rem;
-  color: var(--text-primary);
-  text-decoration: none;
-  filter: grayscale(100%) opacity(0.7);
-  transition: var(--transition-speed);
-}
+  <main>
+    <h1>Welcome!</h1>
+    <style>
+      body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #fef9f3;
+      }
+  
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px;
+      }
+  
+      .sub-container {
+        flex: 1 1 45%;
+        max-width: 590px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(104, 154, 172, 0.1);
+        margin: 10px;
+        padding: 20px;
+        border: 1px solid #e8dcc8;
+        transition: all 0.3s ease;
+      }
 
-.nav-link:hover {
-  filter: grayscale(0%) opacity(1);
-  background: var(--bg-secondary);
-  color: var(--text-secondary);
-}
+      .sub-container:hover {
+        box-shadow: 0 8px 20px rgba(104, 154, 172, 0.2);
+        transform: translateY(-3px);
+      }
+  
+      .profile-container {
+        text-align: left;
+      }
+  
+      .profile-img {
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        margin-right: 20px;
+      }
+  
+      .profile-name {
+        margin-top: 10px;
+        font-size: 1.5em;
+        font-weight: bold;
+      }
 
-.link-text {
-  display: none;
-  margin-left: 1rem;
-}
+      .profile-tagline {
+        font-style: italic;
+        color: #666;
+        margin-top: 5px;
+      }
 
-.nav-link svg {
-  width: 2rem;
-  min-width: 2rem;
-  margin: 0 1.5rem;
-}
+      .tech-badge {
+        display: inline-block;
+        background-color: #e8f4f8;
+        padding: 4px 10px;
+        margin: 3px;
+        border-radius: 5px;
+        font-size: 0.9em;
+        color: #2c5f7e;
+      }
 
-.fa-primary {
-  color: #1e5798;
-}
+      .metric-highlight {
+        background-color: #fff3cd;
+        padding: 2px 6px;
+        border-radius: 3px;
+        font-weight: bold;
+      }
 
-.fa-secondary {
-  color: #14609a;
-}
+      .project-link {
+        color: #0066cc;
+        text-decoration: none;
+        margin: 0 8px;
+      }
 
-.fa-primary,
-.fa-secondary {
-  transition: var(--transition-speed);
-}
+      .project-link:hover {
+        text-decoration: underline;
+      }
+  
+      .knowledge-container {
+        margin-top: 30px;
+      }
+  
+      .social-links {
+        margin-top: 20px;
+      }
+  
+      .social-link {
+        display: inline-block;
+        margin-right: 15px;
+      }
+  
+      .social-link img {
+        width: 30px;
+        height: 30px;
+        object-fit: cover;
+      }
 
-.logo {
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-bottom: 1rem;
-  text-align: center;
-  color: var(--text-secondary);
-  background: var(--bg-secondary);
-  font-size: 1.5rem;
-  letter-spacing: 0.3ch;
-  width: 100%;
-}
+      hr {
+        border: none;
+        border-top: 2px solid #e8dcc8;
+        margin: 15px 0;
+      }
 
-.logo svg {
-  transform: rotate(0deg);
-  transition: var(--transition-speed);
-}
+      h3 {
+        color: #2c5f7e;
+        margin-bottom: 10px;
+      }
+    </style>
 
-.logo-text {
-  display: inline;
-  position: absolute;
-  left: -999px;
-  transition: var(--transition-speed);
-}
+    <div class="container">
+  
+      <!-- Hero Section -->
+      <div class="sub-container">
+        <div class="profile-container">
+          <img src="love.png" class="profile-img" alt="Paramjeet Rout">
+          <div class="profile-name">Paramjeet Rout</div>
+          <p class="profile-tagline">Data Scientist & AI Engineer | Turning Data Chaos into AI-Powered Insights</p>
+          <p><strong>Quick Pitch:</strong> With 2+ years blending SQL/Python analytics and RAG-AI workflows, I've automated processes saving <span class="metric-highlight">30%+ time</span> and built context-aware bots boosting query accuracy by <span class="metric-highlight">25%</span>. Eager to scale prototypes into production ML systems—let's collaborate on your data challenges.</p>
+          <div style="margin-top: 15px;">
+            <strong>Tech Stack:</strong><br>
+            <span class="tech-badge">Python</span>
+            <span class="tech-badge">SQL</span>
+            <span class="tech-badge">Power BI</span>
+            <span class="tech-badge">Docker</span>
+            <span class="tech-badge">Azure</span>
+            <span class="tech-badge">RAG/LLMs</span>
+            <span class="tech-badge">Scikit-learn</span>
+          </div>
+        </div>
+      </div>
 
-.navbar:hover .logo svg {
-  transform: rotate(-180deg);
-}
+      <!-- Short Term Goals -->
+      <div class="sub-container">
+        <h3>My Short-Term Goals</h3>
+        <hr>
+        <p>After almost two years of supporting systems and building analytics solutions, I'm ready to level up and learn something new. I'm actively:</p>
+        <ul style="line-height: 1.8;">
+          <li><strong>Contributing & Sharing:</strong> Writing about my learnings on my blog (<a href="https://sayhelloworld.co" target="_blank" class="project-link">SayHelloWorld.co</a>) and creating tutorials on YouTube</li>
+          <li><strong>Building in Public:</strong> Working on 3 ML prototypes in 2026 to showcase end-to-end deployment skills</li>
+          <li><strong>Open Source:</strong> Contributing to RAG and MLOps repositories to give back to the community</li>
+        </ul>
+        <p style="margin-top: 15px; padding: 12px; background-color: #e8f4f8; border-radius: 5px;">
+          <strong>What I'm Looking For:</strong> A Data Science/AI Engineering role where I can be part of a collaborative team, tackle scalable challenges, and learn from experienced engineers while contributing my RAG and automation expertise.
+        </p>
+      </div>
 
-/* Small screens */
-@media only screen and (max-width: 600px) {
-  .navbar {
-    bottom: 0;
-    width: 100vw;
-    height: 5rem;
-  }
+      <!-- Contact/Connect Section -->
+      <div class="sub-container">
+        <h3>Let's Connect!</h3>
+        <hr>
+        <p>I'm always open to discussions about AI/ML, data engineering, RAG workflows, or just a friendly chat about tech over coffee (virtual or real!).</p>
+        
+        <div style="display: flex; flex-wrap: wrap; gap: 15px; margin-top: 20px;">
+          <a href="mailto:routparamjeet@gmail.com" style="text-decoration: none;">
+            <div style="padding: 12px 20px; background-color: #2c5f7e; color: white; border-radius: 5px; font-weight: 600;">
+              📧 Email Me
+            </div>
+          </a>
+          <a href="https://www.linkedin.com/in/paramjeet-rout2026/" target="_blank" style="text-decoration: none;">
+            <div style="padding: 12px 20px; background-color: #0077b5; color: white; border-radius: 5px; font-weight: 600;">
+              💼 LinkedIn
+            </div>
+          </a>
+          <a href="https://github.com/routparam12" target="_blank" style="text-decoration: none;">
+            <div style="padding: 12px 20px; background-color: #333; color: white; border-radius: 5px; font-weight: 600;">
+              💻 GitHub
+            </div>
+          </a>
+          <a href="https://sayhelloworld.co" target="_blank" style="text-decoration: none;">
+            <div style="padding: 12px 20px; background-color: #ff6b6b; color: white; border-radius: 5px; font-weight: 600;">
+              ✍️ Blog
+            </div>
+          </a>
+        </div>
+        
+        <p style="margin-top: 20px; text-align: center; color: #666; font-size: 0.9em;">
+          <em>Last Updated: January 2026 | Built with passion for data & AI</em>
+        </p>
+      </div>
 
-  .logo {
-    display: none;
-  }
+    </div>
+  
+  </main>
+</body>
+</html>
+  
+      <!-- About Me -->
+      <div class="sub-container">
+        <div class="knowledge-container">
+          <h3>About Me</h3>
+          <hr>
+          <p>I'm a hands-on builder who thrives on reverse-engineering complex systems to prototype "ugly but functional" solutions first—then iterates to elegance. Starting as a Business Analyst automating XML drudgery, I've evolved into integrating RAG for smarter analytics at Unimrkt Response. My drive? Bridging data reliability with AI innovation to empower decisions.</p>
+          
+          <p><strong>How I Learn:</strong> Reverse Engineer & Build Ugly Prototypes First. I can learn just about anything by having a final product to tear apart piece by piece. I break the code where I need to figure out why things work the way they do. Documentation is just a reference.</p>
 
-  .navbar-nav {
-    flex-direction: row;
-  }
+          <p><strong>Fun Fact:</strong> I once slashed a 4-hour report compile to 1 hour with Python—now I'm chasing similar wins in agentic AI workflows.</p>
+        </div>
+      </div>
+  
+      <!-- Experience Section 1 -->
+      <div class="sub-container">
+        <div class="card card-body h-100">
+          <h3>Data Analyst</h3>
+          <p><em>Unimrkt Response LLP, Gurgaon</em></p>
+          <hr>
+          <p><strong>June 2025 – Present</strong></p>
+          <ul>
+            <li>Optimized SQL queries and Python ETL scripts processing <span class="metric-highlight">50K+ records daily</span>, reducing extraction time by <span class="metric-highlight">40%</span> via indexing and pandas vectorization—enabling real-time business insights.</li>
+            <li>Designed interactive Power BI dashboards with DAX measures for 10+ stakeholders, achieving <span class="metric-highlight">95% refresh efficiency</span> and cutting interpretation errors by <span class="metric-highlight">25%</span> through intuitive slicers.</li>
+            <li>Engineered a RAG-based conversational assistant with ChatGPT API and vector search (FAISS embeddings), retrieving from PostgreSQL/JSON sources to boost response accuracy from 70% to <span class="metric-highlight">92%</span>—handling 200+ internal queries/week with &lt;2s latency.
+              <a href="https://github.com/routparam12/rag-assistant" class="project-link" target="_blank">[GitHub]</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+  
+      <!-- Experience Section 2 -->
+      <div class="sub-container">
+        <h3>Business Analyst Associate</h3>
+        <p><em>Tech Mahindra, Ahmedabad</em></p>
+        <hr>
+        <p><strong>March 2024 – May 2025</strong></p>
+        <ul>
+          <li>Developed and optimized Power BI data models with DAX, streamlining 15+ reports and slashing manual effort by <span class="metric-highlight">30%</span> (from 10 to 7 hours/week)—directly supporting client KPIs in telecom sector.</li>
+          <li>Automated XML test report ingestion using Python/PowerShell pipelines, compressing daily processing from 4 hours to <span class="metric-highlight">1 hour</span> across 5K+ files—improving team velocity by <span class="metric-highlight">75%</span> and error rates to &lt;1%.
+            <a href="https://github.com/routparam12/xml-automation" class="project-link" target="_blank">[Code]</a>
+          </li>
+        </ul>
+      </div>
+  
+      <!-- Featured Projects -->
+      <div class="sub-container">
+        <h3>Featured Projects</h3>
+        <hr>
+        <p><em>Follow my framework: Problem → Data → EDA → Model → Eval → Deploy → Reflect</em></p>
+        
+        <h4>1. RAG-Based Conversational Agent</h4>
+        <p><strong>Tech:</strong> Python • ChatGPT API • FAISS • Azure | Nov 2025
+          <a href="https://github.com/routparam12/rag-agent" class="project-link" target="_blank">[GitHub]</a>
+        </p>
+        <p><strong>Problem:</strong> Internal teams wasted hours querying scattered DB/JSON data—needed a context-aware AI helper.</p>
+        <p><strong>Results:</strong> <span class="metric-highlight">92% accuracy</span> uplift; &lt;2s latency on 1K queries; deployed via Docker on Azure for 10 users.</p>
+        <p><strong>Impact:</strong> Reduced query resolution time by <span class="metric-highlight">50%</span>.</p>
 
-  .nav-link {
-    justify-content: center;
-  }
+        <h4>2. Gender Prediction from Names</h4>
+        <p><strong>Tech:</strong> Python • Excel • Power BI | Mar 2025
+          <a href="https://github.com/routparam12/gender-prediction" class="project-link" target="_blank">[GitHub]</a>
+        </p>
+        <p><strong>Problem:</strong> Marketing datasets had inconsistent gender labels, skewing segmentation by 15%.</p>
+        <p><strong>Results:</strong> <span class="metric-highlight">85% precision</span> on holdout set; identified cultural naming trends.</p>
+        <p><strong>Impact:</strong> Enabled targeted campaigns with <span class="metric-highlight">20% better engagement</span>.</p>
 
-  main {
-    margin: 0;
-    margin-bottom: 6rem; /* Add space for bottom navbar */
-  }
-}
+        <h4>3. Customer Churn Prediction (In Progress)</h4>
+        <p><strong>Tech:</strong> Python • Scikit-learn • XGBoost • Docker | Dec 2025
+          <a href="https://github.com/routparam12/churn-prediction" class="project-link" target="_blank">[GitHub]</a>
+        </p>
+        <p><strong>Problem:</strong> Telecom clients lose 12% monthly to churn—predict to retain proactively.</p>
+        <p><strong>Results:</strong> <span class="metric-highlight">88% AUC-ROC</span>; feature importance highlighted billing issues.</p>
+        <p><strong>Impact:</strong> Simulated retention uplift of 15% ($50K savings potential).</p>
+      </div>
 
-/* Large screens */
-@media only screen and (min-width: 600px) {
-  .navbar {
-    top: 0;
-    width: 5rem;
-    height: 100vh;
-  }
+      <!-- Skills & Certifications - Two Column Layout -->
+      <div class="sub-container">
+        <h3>Technical Skills</h3>
+        <hr>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+          <div>
+            <h4 style="color: #2c5f7e; margin-bottom: 8px;">Data Handling</h4>
+            <ul style="margin-top: 5px; line-height: 1.8;">
+              <li>Python, SQL</li>
+              <li>Data Cleaning & Transformation</li>
+              <li>SQL Optimization</li>
+              <li>PostgreSQL, MySQL</li>
+            </ul>
+            
+            <h4 style="color: #2c5f7e; margin-top: 20px; margin-bottom: 8px;">Visualization & BI</h4>
+            <ul style="margin-top: 5px; line-height: 1.8;">
+              <li>Power BI, DAX</li>
+              <li>Data Modeling</li>
+              <li>Dashboard Design</li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 style="color: #2c5f7e; margin-bottom: 8px;">AI Engineering</h4>
+            <ul style="margin-top: 5px; line-height: 1.8;">
+              <li>RAG Workflows</li>
+              <li>Prompt Engineering</li>
+              <li>API-based LLM usage</li>
+              <li>Vector Search (FAISS)</li>
+            </ul>
+            
+            <h4 style="color: #2c5f7e; margin-top: 20px; margin-bottom: 8px;">Deployment</h4>
+            <ul style="margin-top: 5px; line-height: 1.8;">
+              <li>Docker</li>
+              <li>Azure</li>
+              <li>ETL Pipelines</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div style="margin-top: 15px; padding: 12px; background-color: #f8f9fa; border-radius: 5px; border-left: 4px solid #2c5f7e;">
+          <strong>Currently Learning:</strong> MongoDB, Scikit-learn, Machine Learning fundamentals
+        </div>
+      </div>
 
-  .navbar:hover {
-    width: 16rem;
-  }
-
-  .navbar:hover .link-text {
-    display: inline;
-  }
-
-  .navbar:hover .logo svg {
-    margin-left: 11rem;
-  }
-
-  .navbar:hover .logo-text {
-    left: 0px;
-  }
-
-  main {
-    margin-left: 6rem; /* Add more space to prevent content cutoff */
-  }
-}
-
-.dark {
-  --text-primary: #b6b6b6;
-  --text-secondary: #ececec;
-  --bg-primary: #23232e;
-  --bg-secondary: #141418;
-}
-
-.light {
-  --text-primary: #1f1f1f;
-  --text-secondary: #000000;
-  --bg-primary: #ffffff;
-  --bg-secondary: #e4e4e4;
-}
-
-.solar {
-  --text-primary: #576e75;
-  --text-secondary: #35535c;
-  --bg-primary: #fdf6e3;
-  --bg-secondary: #f5e5b8;
-}
-
-.theme-icon {
-  display: none;
-}
-
-.dark #darkIcon {
-  display: block;
-}
-
-.light #lightIcon {
-  display: block;
-}
-
-.solar #solarIcon {
-  display: block;
-}
-
-ul {
-  padding: 0;
-  list-style-type: none;
-}
+      <div class="sub-container">
+        <h3>Certifications & Programs</h3>
+        <hr>
+        <div style="line-height: 2;">
+          <div style="margin-bottom: 15px;">
+            <strong style="color: #2c5f7e;">🎓 Google Antigravity Program</strong><br>
+            <span style="color: #666; font-size: 0.95em;">Participant (GenAI & Applied AI Concepts) • 2025</span><br>
+            <span style="font-size: 0.9em;">Applied to RAG embeddings and conversational AI workflows</span>
+          </div>
+          
+          <div style="margin-bottom: 15px;">
+            <strong style="color: #2c5f7e;">🤖 RAG Learning & Bot Building</strong><br>
+            <span style="color: #666; font-size: 0.95em;">Hands-on Completion • 2025</span><br>
+            <span style="font-size: 0.9em;">Built production-ready conversational agent with ChatGPT API</span>
+          </div>
+          
+          <div style="margin-bottom: 15px;">
+            <strong style="color: #2c5f7e;">📊 Microsoft Data Analytics</strong><br>
+            <span style="color: #666; font-size: 0.95em;">NIIT Foundation • 2024</span><br>
+            <span style="font-size: 0.9em;">Foundation for Power BI dashboards and data modeling</span>
+          </div>
+          
+          <div style="margin-bottom: 15px;">
+            <strong style="color: #2c5f7e;">🐍 Python Certification</strong><br>
+            <span style="color: #666; font-size: 0.95em;">LIT, Bhubaneswar • 2024</span><br>
+            <span style="font-size: 0.9em;">Core programming foundation for all data projects</span>
+          </div>
+        </div>
+      </div>
