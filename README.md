@@ -1,4 +1,4 @@
-# Resume_param
+# Portfolio_param
 
 A personal portfolio website for showcasing a professional resume, skills, projects, and contact information.
 
