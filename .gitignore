@@ -1,0 +1,9 @@
+# Local agent/editor artifacts
+partials/.agents
+partials/.codex
+
+# Common OS/editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+*.log

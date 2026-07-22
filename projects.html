@@ -5,98 +5,89 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta charset="UTF-8">
+  <meta name="description" content="Projects and experience from Paramjeet Rout across production RAG, fraud detection, exam generation, analytics, and automation.">
+  <meta name="theme-color" content="#11110f">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Projects - Paramjeet Rout">
+  <meta property="og:description" content="Selected Generative AI, applied ML, and analytics projects from Paramjeet Rout.">
+  <meta property="og:image" content="og-card.png">
+  <meta property="og:url" content="https://routparam12.github.io/param/projects.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Projects - Paramjeet Rout">
+  <meta name="twitter:description" content="Selected Generative AI, applied ML, and analytics projects from Paramjeet Rout.">
+  <meta name="twitter:image" content="og-card.png">
   <title>Projects & Experience - Paramjeet Rout</title>
-  <script defer src="theme.js"></script>
+  <link rel="icon" type="image/png" href="love.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap" rel="stylesheet" />
+  <script defer src="theme.js"></script>
 </head>
 
-<body>
+<body data-page="projects">
+  <div id="nav-placeholder"></div>
 
   <main>
-    <!-- Header with Welcome and Navigation -->
-    <header class="main-header">
-      <h1 class="welcome-text">Projects & Experience</h1>
-      <nav class="top-nav">
-        <a href="about.html" class="top-nav-link">About</a>
-        <a href="index.html#resume" class="top-nav-link">Resume</a>
-        <a href="projects.html" class="top-nav-link">Projects</a>
-        <a href="hobbies.html" class="top-nav-link">Hobbies</a>
-      </nav>
+    <header class="page-header">
+      <h1>Projects &amp; Experience</h1>
     </header>
-  
-    <div class="container">
 
-      <!-- Project 1: RAG-Based Conversational Agent -->
-      <div class="sub-container">
-        <h3>RAG-Based Conversational Agent</h3>
-        <hr>
-        <p><strong>Tech:</strong> Python • ChatGPT API • FAISS • Azure | Nov 2025
-          <a href="https://github.com/routparam12/rag-agent" class="project-link" target="_blank">[GitHub]</a>
+    <div class="card-grid">
+
+      <div class="info-card span-2">
+        <h3>Dora.ChatBot (SurveySenseAI)</h3>
+        <p class="card-meta">FastAPI · LangChain · LangGraph · Hugging Face · FAISS · Redis · PostgreSQL · Docker · Azure Pipelines · Oct – Dec 2025
+          <a href="https://github.com/routparam12/Dora.ChatBot" class="project-link" target="_blank" rel="noreferrer">[GitHub]</a>
         </p>
-        <p><strong>Problem:</strong> Internal teams wasted hours querying scattered DB/JSON data—needed a context-aware AI helper.</p>
-        <p><strong>Results:</strong> <span class="metric-highlight">92% accuracy</span> uplift; &lt;2s latency on 1K queries; deployed via Docker on Azure for 10 users.</p>
-        <p><strong>Impact:</strong> Reduced query resolution time by <span class="metric-highlight">50%</span>.</p>
-        <p><em>Follow my framework: Problem → Data → EDA → Model → Eval → Deploy → Reflect</em></p>
+        <p><strong>What it is:</strong> A full-stack Generative AI customer support platform with multi-agent orchestration via LangGraph and FAISS vector retrieval.</p>
+        <p><strong>Architecture:</strong> Unified LLM abstraction layer (OpenAI GPT + Gemini) with model fallback and zero-downtime switching; 9-type persistent memory (short-term, long-term, entity, fact, preference, procedural, episodic, semantic, working) stored via SQLAlchemy ORM with Alembic migrations.</p>
+        <p><strong>Production-ready:</strong> Redis caching for fast short-term recall, multi-source ingestion (PDF, DOCX, email-to-JSON, text-to-JSON), Dockerized service, Azure CI/CD, JWT authentication.</p>
       </div>
 
-      <!-- Project 2: Gender Prediction from Names -->
-      <div class="sub-container">
-        <h3>Gender Prediction from Names</h3>
-        <hr>
-        <p><strong>Tech:</strong> Python • Excel • Power BI | Mar 2025
-          <a href="https://github.com/routparam12/gender-prediction" class="project-link" target="_blank">[GitHub]</a>
+      <div class="info-card">
+        <h3>PaperShield</h3>
+        <p class="card-meta">FastAPI · LangGraph · LlamaIndex · ChromaDB · Gemini API · Apr 2026 – Ongoing
+          <a href="https://github.com/routparam12/PaperShield-AI-Exam-Engine-for-Leak-Proof-Assessments" class="project-link" target="_blank" rel="noreferrer">[GitHub]</a>
         </p>
-        <p><strong>Problem:</strong> Marketing datasets had inconsistent gender labels, skewing segmentation by 15%.</p>
-        <p><strong>Results:</strong> <span class="metric-highlight">85% precision</span> on holdout set; identified cultural naming trends.</p>
-        <p><strong>Impact:</strong> Enabled targeted campaigns with <span class="metric-highlight">20% better engagement</span>.</p>
-        <p><em>Follow my framework: Problem → Data → EDA → Model → Eval → Deploy → Reflect</em></p>
+        <p><strong>Problem:</strong> Exam paper leaks — a structural weakness in fixed question banks.</p>
+        <p><strong>Solution:</strong> MCQs generated dynamically from syllabus PDFs at exam time via LlamaIndex + ChromaDB RAG; questions are never stored.</p>
+        <p><strong>Details:</strong> LangGraph-orchestrated exam flow with paginated delivery, shuffle logic, admin-only ingestion, and role-based access — built for JEE/NEET/State PSC scale.</p>
       </div>
 
-      <!-- Project 3: Customer Churn Prediction -->
-      <div class="sub-container">
-        <h3>Customer Churn Prediction (In Progress)</h3>
-        <hr>
-        <p><strong>Tech:</strong> Python • Scikit-learn • XGBoost • Docker | Dec 2025
-          <a href="https://github.com/routparam12/churn-prediction" class="project-link" target="_blank">[GitHub]</a>
-        </p>
-        <p><strong>Problem:</strong> Telecom clients lose 12% monthly to churn—predict to retain proactively.</p>
-        <p><strong>Results:</strong> <span class="metric-highlight">88% AUC-ROC</span>; feature importance highlighted billing issues.</p>
-        <p><strong>Impact:</strong> Simulated retention uplift of 15% ($50K savings potential).</p>
-        <p><em>Follow my framework: Problem → Data → EDA → Model → Eval → Deploy → Reflect</em></p>
+      <div class="info-card">
+        <h3>Fraud User Detection System</h3>
+        <p class="card-meta">Python · Scikit-learn · Fuzzy Logic · MLflow · Streamlit · Feb – Apr 2026</p>
+        <p><strong>Problem:</strong> Duplicate and high-risk accounts hiding in call data.</p>
+        <p><strong>Approach:</strong> Fuzzy matching (phonetic + edit-distance scoring) combined with Decision Tree classification; feature engineering on email similarity, IP geolocation, browser fingerprinting, and behavioural signals.</p>
+        <p><strong>Results:</strong> <span class="metric-highlight">70% precision</span> (7/10 flagged accounts confirmed fraud); tracked via MLflow, monitored via a Streamlit dashboard. Deployed on Azure — not publicly available.</p>
       </div>
 
-      <!-- Work Experience 1: Data Analyst -->
-      <div class="sub-container">
-        <h3>Data Analyst</h3>
-        <hr>
-        <p><em>Unimrkt Response LLP, Gurgaon</em></p>
-        <p><strong>June 2025 – Present</strong></p>
+      <div class="info-card span-2">
+        <h3>Generative AI Engineer / Data Analyst</h3>
+        <p class="card-meta">Unimrkt Response LLP, Gurugram (Hybrid) · Oct 2025 – Present</p>
         <ul>
-          <li>Optimized SQL queries and Python ETL scripts processing <span class="metric-highlight">50K+ records daily</span>, reducing extraction time by <span class="metric-highlight">40%</span> via indexing and pandas vectorization—enabling real-time business insights.</li>
-          <li>Designed interactive Power BI dashboards with DAX measures for 10+ stakeholders, achieving <span class="metric-highlight">95% refresh efficiency</span> and cutting interpretation errors by <span class="metric-highlight">25%</span> through intuitive slicers.</li>
-          <li>Engineered a RAG-based conversational assistant with ChatGPT API and vector search (FAISS embeddings), retrieving from PostgreSQL/JSON sources to boost response accuracy from 70% to <span class="metric-highlight">92%</span>—handling 200+ internal queries/week with &lt;2s latency.
-            <a href="https://github.com/routparam12/rag-assistant" class="project-link" target="_blank">[GitHub]</a>
-          </li>
+          <li>Architecting a production RAG chatbot upgrade — replacing static replies with a multi-agent pipeline (LangChain + LangGraph) that retrieves context from live relational databases and JSON sources via FAISS before response generation.</li>
+          <li>Delivered a fraud detection system using fuzzy matching and Decision Tree classification (scikit-learn), achieving <span class="metric-highlight">70% precision</span>, tracked via MLflow for experiment versioning and evaluation.</li>
+          <li>Iterated on token optimisation, chunk sizing, and retrieval thresholds to balance LLM accuracy and API cost in production.</li>
+          <li>Designed an OLTP-to-OLAP architecture — PostgreSQL ingested into Elasticsearch via Logstash ETL with <span class="metric-highlight">3-minute incremental refresh</span>, enabling 3-5 years of warehouse-scale analysis without impacting production load.</li>
         </ul>
       </div>
 
-      <!-- Work Experience 2: Business Analyst Associate -->
-      <div class="sub-container">
-        <h3>Business Analyst Associate</h3>
-        <hr>
-        <p><em>Tech Mahindra, Ahmedabad</em></p>
-        <p><strong>March 2024 – May 2025</strong></p>
+      <div class="info-card span-2">
+        <h3>Data Scientist Associate</h3>
+        <p class="card-meta">Tech Mahindra, Ahmedabad · March 2024 – May 2025</p>
         <ul>
-          <li>Developed and optimized Power BI data models with DAX, streamlining 15+ reports and slashing manual effort by <span class="metric-highlight">30%</span> (from 10 to 7 hours/week)—directly supporting client KPIs in telecom sector.</li>
-          <li>Automated XML test report ingestion using Python/PowerShell pipelines, compressing daily processing from 4 hours to <span class="metric-highlight">1 hour</span> across 5K+ files—improving team velocity by <span class="metric-highlight">75%</span> and error rates to &lt;1%.
-            <a href="https://github.com/routparam12/xml-automation" class="project-link" target="_blank">[Code]</a>
-          </li>
+          <li>Developed workflow automation for PDF parsing, metadata extraction, and data cleaning pipelines using Python and Azure Functions.</li>
+          <li>Implemented role-based access retrieval for sensitive documents using JWT authentication and FastAPI middleware.</li>
+          <li>Integrated OpenAI, Gemini, and Together AI into a unified abstraction layer enabling model fallback and cost-optimized inference.</li>
+          <li>Designed internal dashboards for usage analytics, retrieval accuracy, and latency monitoring using Streamlit and MLflow.</li>
+          <li>Automated XML test report processing with Python and PowerShell, cutting compilation time from 4 hours to <span class="metric-highlight">1 hour</span> (~15+ hours saved per week collectively).</li>
+          <li>Reduced manual reporting effort by <span class="metric-highlight">30%</span> through optimised DAX measures and data models.</li>
         </ul>
       </div>
 
     </div>
-  
   </main>
 </body>
 </html>

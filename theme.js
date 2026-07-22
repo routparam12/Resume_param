@@ -1,12 +1,34 @@
 // param/theme.js
 
-
 const body = document.body;
 const savedTheme = localStorage.getItem("portfolio-theme");
 const savedFont = localStorage.getItem("portfolio-font");
 
 if (savedTheme === "light") body.classList.add("light-mode");
 if (savedFont === "serif") body.classList.add("serif-mode");
+
+// --- NEW: load the shared nav partial on subpages ---
+// Only runs if a page has <div id="nav-placeholder"></div>.
+// NOTE: fetch() needs http(s), not file://. Serve locally with
+// `npx serve` / VS Code Live Server, or just test after deploying.
+const navPlaceholder = document.querySelector("#nav-placeholder");
+if (navPlaceholder) {
+  fetch("partials/nav.html")
+    .then((r) => r.text())
+    .then((html) => {
+      navPlaceholder.innerHTML = html;
+      const current = body.dataset.page;
+      if (current) {
+        const activeLink = navPlaceholder.querySelector(`a[data-page="${current}"]`);
+        if (activeLink) activeLink.classList.add("active");
+      }
+    })
+    .catch(() => {
+      // Fallback so the page isn't left with an empty header if fetch fails
+      navPlaceholder.innerHTML =
+        '<header class="site-nav"><a class="logo-link" href="index.html">PARAMJEET ROUT</a><ul><li><a class="nav-cta" href="Paramjeet_Rout_Resume.pdf" download>Download resume</a></li></ul></header>';
+    });
+}
 
 const themeToggle = document.querySelector("#theme-toggle");
 const fontToggle = document.querySelector("#font-toggle");
@@ -37,7 +59,8 @@ const updateClock = () => {
 
 updateClock();
 setInterval(updateClock, 1000);
-document.querySelector("#year").textContent = new Date().getFullYear();
+const yearNode = document.querySelector("#year");
+if (yearNode) yearNode.textContent = new Date().getFullYear();
 
 const reveals = document.querySelectorAll(".reveal");
 if ("IntersectionObserver" in window) {
